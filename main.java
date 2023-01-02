@@ -1,9 +1,4 @@
 //JAVA 11
-//EPS org.apache.groovy:groovy:4.0.7
-//EPS org.apache.groovy:groovy-all:4.0.7
-//EPS org.codehaus.groovy:groovy-all:3.0.9
-//EPS org.apache.groovy:groovy-binary:+
-//EPS org.apache.groovy:groovy-bom:+
 //DEPS org.apache.groovy:groovy:4.0.7
 //DEPS org.apache.groovy:groovy-ant:+
 //DEPS org.apache.groovy:groovy-astbuilder:+
@@ -38,9 +33,7 @@
 //DEPS org.apache.groovy:groovy-xml:+
 //DEPS org.apache.groovy:groovy-yaml:+
 
-
 import groovy.lang.GroovyShell;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
