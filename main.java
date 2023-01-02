@@ -40,11 +40,8 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 public class main {
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) throws FileNotFoundException {
-                InputStream is = new FileInputStream(System.getProperty("script"));
-                new GroovyShell().evaluate(new InputStreamReader(is));
-    }
+		InputStream is = new FileInputStream(System.getProperty("script"));
+		new GroovyShell().evaluate(new InputStreamReader(is));
+	}
 }
