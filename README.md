@@ -5,6 +5,6 @@ Use jbang to run any groovy script
 git clone https://github.com/automationStati0n/jbang-groovy-launcher
 cd jbang-groovy-launcher
 jbang main.java -Dscript=yourGroovyScript.groovy
-```  
-or  <br>
+``` 
+or  
 `jbang https://github.com/automationStati0n/jbang-groovy-launcher -Dscript=yourGroovyScript.groovy`
