@@ -1,5 +1,7 @@
 # jbang-groovy-launcher
 Use jbang to run any groovy script
+## Jbang download
+https://www.jbang.dev/download/
 ## Usage
 ```bash
 git clone https://github.com/automationStati0n/jbang-groovy-launcher
