@@ -51,7 +51,7 @@ public class main {
 	 * @param args
 	 */
 	public static void main(String[] args) throws FileNotFoundException {
-                InputStream is = new FileInputStream("C:\\Jesse\\GitHub\\badass-jlink-example\\src\\main\\groovy\\openai-gpt-3-withUI.groovy");
+                InputStream is = new FileInputStream(args[0);
                 new GroovyShell().evaluate(new InputStreamReader(is));
     }
 }
