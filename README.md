@@ -7,4 +7,4 @@ cd jbang-groovy-launcher
 jbang main.java -Dscript=yourGroovyScript.groovy
 ``` 
 or  
-`jbang https://gist.github.com/automationStati0n/2854188e8e75b5266f97ef25f912f956 -Dscript=yourGroovyScript.groovy`
+`jbang -Dscript=yourGroovyScript.groovy https://gist.github.com/automationStati0n/2854188e8e75b5266f97ef25f912f956`
