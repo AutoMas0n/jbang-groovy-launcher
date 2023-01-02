@@ -44,7 +44,7 @@ public class main {
 	 * @param args
 	 */
 	public static void main(String[] args) throws FileNotFoundException {
-                InputStream is = new FileInputStream(args[0);
+                InputStream is = new FileInputStream(System.getProperty("script"));
                 new GroovyShell().evaluate(new InputStreamReader(is));
     }
 }
