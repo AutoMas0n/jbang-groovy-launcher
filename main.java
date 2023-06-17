@@ -33,15 +33,40 @@
 //DEPS org.apache.groovy:groovy-xml:+
 //DEPS org.apache.groovy:groovy-yaml:+
 
+import groovy.lang.Binding;
 import groovy.lang.GroovyShell;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import picocli.CommandLine;
+import picocli.CommandLine.Command;
+import picocli.CommandLine.Parameters;
 
-public class main {
-	public static void main(String[] args) throws FileNotFoundException {
-		InputStream is = new FileInputStream(System.getProperty("script"));
-		new GroovyShell().evaluate(new InputStreamReader(is));
-	}
+@Command(name = "main", mixinStandardHelpOptions = true, version = "1.0")
+public class main implements Runnable {
+
+    @Parameters(index = "0", description = "The groovy script file to run.")
+    private String script;
+
+    @Parameters(index = "1..*", arity = "0..*", description = "Arguments for the groovy script.")
+    private String[] groovyArgs;
+
+    public static void main(String[] args) {
+        int exitCode = new CommandLine(new main()).execute(args);
+        System.exit(exitCode);
+    }
+
+    @Override
+    public void run() {
+        try {
+            InputStream is = new FileInputStream(script);
+            Binding binding = new Binding();
+            binding.setVariable("args", groovyArgs);
+            GroovyShell shell = new GroovyShell(binding);
+            shell.evaluate(new InputStreamReader(is));
+        } catch (FileNotFoundException e) {
+            System.err.println("Error: " + e.getMessage());
+        }
+    }
 }
