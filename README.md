@@ -13,7 +13,7 @@ jbang -Dscript="yourGroovyScript.groovy" main.java
 ``` 
 or  
 ```bash
-jbang -Dscript="yourGroovyScript.groovy" https://gist.github.com/automationStati0n/2854188e8e75b5266f97ef25f912f956
+jbang -Dscript="yourGroovyScript.groovy" https://gist.github.com/automationStati0n/d8d28cfb7a68592c79fd052419597e04
 ```
 ## Extras
 You can pass in as many properties and arguments as you want with jbang and be able to access them from your groovy script
