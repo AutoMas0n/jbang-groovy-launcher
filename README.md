@@ -1,7 +1,9 @@
 # jbang-groovy-launcher
 Use jbang to run any groovy script
 ## Jbang download
-https://www.jbang.dev/download/  
+https://www.jbang.dev/download/ 
+
+### Windows
 *You may have to run `Set-ExecutionPolicy RemoteSigned -scope CurrentUser` & then `iex "& { $(iwr https://ps.jbang.dev -UseBasicParsing) } app setup"` if using powershell*
 ### Download Jbang using Choco
 https://chocolatey.org/install  
